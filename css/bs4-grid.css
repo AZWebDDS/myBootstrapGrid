@@ -1,0 +1,78 @@
+#my-bs4-greed {
+    /* background-color: yellowgreen; */
+    height: 100vh;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    z-index: -1;
+}
+
+#my-bs4-greed .container {
+    border: 1px red solid
+}
+
+#my-bs4-greed .col,
+.col-3 {
+    border: 1px lightseagreen solid
+}
+
+#my-bs4-greed .col DIV,
+.col-3 DIV {
+    background-color: rgba(255, 0, 0, 0.1);
+    border: 1px grey solid;
+}
+
+/* Smartphons */
+/* 4 колонки */
+@media (max-width: 576px) and (orientation: portrait) {
+    .portrait.smartphone {
+        display: block;
+    }
+    .landscape.smartphone,
+    .portrait.pad,
+    .other-more-992 {
+        display: none;
+    }
+}
+
+/* 6 колонок */
+@media (max-width: 860px) and (orientation: landscape) {
+    .landscape.smartphone {
+        display: block;
+    }
+    .portrait.smartphone,
+    .portrait.pad,
+    .other-more-992 {
+        display: none;
+    }
+    
+}
+
+/* Pads */
+/* 9 колонок */
+@media (min-width: 768px) and (max-width: 992px) and (orientation: portrait) {
+    .portrait.pad {
+        display: block;
+    }
+    .portrait.smartphone,
+    .landscape.smartphone,
+    .other-more-992 {
+        display: none;
+    }
+}
+
+/* Other W>992px */
+/* 12 колонок */
+@media (min-width: 960px), and (orientation: portrait), and (orientation: landscape) {
+    .portrait.smartphone,
+    .landscape.smartphone,
+    .portrait.pad
+    {
+        display: none;
+    }
+    .other-more-992 {
+        display: block;
+    }
+}
+
